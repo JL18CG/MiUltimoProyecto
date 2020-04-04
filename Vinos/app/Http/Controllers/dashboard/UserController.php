@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+
+
     public function index()
     {
-        $users = User::orderBy('created_at', 'desc')->paginate(10);
+        $users = User::orderBy('id','asc')->paginate(10);
         return view('dashboard.usuarios.index', ['users' => $users]);
     }
 
@@ -37,6 +39,7 @@ class UserController extends Controller
      */
     public function store(StoreUserPost $request)
     {
+        ///Validado con Request/StoreUserPost
         User::create(
             [
                 'name' => $request['name'],
@@ -80,6 +83,7 @@ class UserController extends Controller
      */
     public function update(UpdateUserPut $request, User $user)
     {
+        ///Validado con Request/UpdateUserPut
         if($request['pass1']==null){
             $user->update(
                 [

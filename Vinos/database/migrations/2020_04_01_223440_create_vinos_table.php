@@ -20,7 +20,10 @@ class CreateVinosTable extends Migration
             $table->string('precio');
             $table->string('descripcion');
             $table->string('region');
-            $table->bigInteger('info_vino_id')->unsigned()->nullable();
+            $table->string('color');
+            $table->string('tipo');
+            $table->integer('meses_tiempo');
+            $table->string('t_azucar');
             $table->timestamps();
         });
     }

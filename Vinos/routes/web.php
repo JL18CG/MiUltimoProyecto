@@ -11,21 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 ///Usuarios
-Route::resource('/home/user', 'dashboard\UserController');
+Route::resource('/home/dashboard/user', 'dashboard\UserController');
 
 //Perfil
 Route::resource('/home/perfil', 'dashboard\PerfilController');
 
+//Vinos
+Route::resource('/home/dashboard/vinos', 'dashboard\VinoController');
 
 
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home', 'dashboard\InicioController@index')->name('index');
+Route::get('/', 'dashboard\InicioController@index')->name('index');
 

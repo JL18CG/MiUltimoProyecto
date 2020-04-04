@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio</a>
+          <a class="nav-link"  href="{{ url('/') }}">Inicio</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -17,7 +17,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{{ route('user.index') }}">Usuarios</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Vinos</a>
+            <a class="dropdown-item" href="{{ route('vinos.index') }}">Vinos</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Comentarios</a>
           </div>
