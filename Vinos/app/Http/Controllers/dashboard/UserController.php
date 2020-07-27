@@ -81,7 +81,7 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserPut $request, User $user)
+    public function update(UpdateUserPut $request, User $admin)
     {
         ///Validado con Request/UpdateUserPut
         if($request['pass1']==null){
